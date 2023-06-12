@@ -1,0 +1,56 @@
+import java.lang.String;
+import java.awt.*;
+import java.awt.event.*;
+
+public class calendar2 extends Frame {
+   private Button MonthBtn;
+   private Button MonthDayBtn;
+   private Button WeekDayBtn;
+
+   private Label MonthLbl;
+   private Label MonthDayLbl;
+   private Label WeekDayLbl;
+
+   public calendar2() {
+      MonthBtn = new Button ("Μήνας");
+      MonthDayBtn = new Button ("Ημέρα Μήνα");
+      WeekDayBtn = new Button ("Ημέρα Εβδομάδας");
+
+      MonthLbl = new Label ("Ιανουάριος");
+      MonthDayLbl = new Label ("1");
+      WeekDayLbl = new Label ("Δευτέρα");
+
+      FlowLayout fl=new FlowLayout(FlowLayout.LEFT);
+      this.setLayout(fl);
+	  
+      this.add(MonthBtn);
+      this.add(MonthLbl);
+      this.add(MonthDayBtn);
+      this.add(MonthDayLbl);
+      this.add(WeekDayBtn);
+      this.add(WeekDayLbl);
+	  
+      this.addWindowListener(new c2listener());
+   }
+}
+
+class c2listener implements WindowListener {
+   public void windowClosing(WindowEvent we) {
+      System.exit(0); 
+   }
+   public void windowOpened(WindowEvent we) {};
+   public void windowClosed(WindowEvent we) {};
+   public void windowActivated(WindowEvent we) {};
+   public void windowDeactivated(WindowEvent we) {};
+   public void windowIconified(WindowEvent we) {};
+   public void windowDeiconified(WindowEvent we) {};
+}
+
+class test_calendar2 {
+   public static void main(String[] args) {
+      calendar2 MyCalendar = new calendar2();
+      MyCalendar.setSize(new Dimension(400,250));
+      MyCalendar.setTitle("Ημερολόγιο");
+      MyCalendar.setVisible(true);
+   }
+
