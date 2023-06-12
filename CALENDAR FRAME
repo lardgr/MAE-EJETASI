@@ -1,0 +1,73 @@
+package awtCalendar;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class calendarFrame extends Frame{
+	//declare member variables
+	private Button monthBtn, dayBtn, dateBtn;
+	private Label monthLbl, dayLbl, dateLbl;
+	private Label hello;
+
+	public calendarFrame() {
+		//construct the components
+		monthBtn = new Button("Month");
+		dayBtn = new Button("Month Day");
+		dateBtn = new Button("Week Day");
+		monthLbl = new Label("January");
+		dayLbl = new Label("Monday");
+		dateLbl = new Label("1");
+		hello = new Label ("hello");
+	}
+
+	public void prepareUI() {
+//		change the default layout (BorderLayout) to FlowLayout
+		FlowLayout fl = new FlowLayout(FlowLayout.LEFT);
+		this.setLayout(fl);
+		//add the componnents to the container (frame)
+		this.add(monthBtn);
+		this.add(monthLbl);
+		this.add(dayBtn);
+		this.add(dayLbl);
+		this.add(dateBtn);
+		this.add(dateLbl);
+	}
+}
+
+
+
+
+//public class calendarFrame extends JFrame{
+//	//declare member variables
+//	private JButton monthBtn, dayBtn, dateBtn;
+//	private JLabel monthLbl, dayLbl, dateLbl;
+//
+//	public calendarFrame() {
+//		//construct the components
+//		monthBtn = new JButton("Month");
+//		dayBtn = new JButton("Month Day");
+//		dateBtn = new JButton("Week Day");
+//		monthLbl = new JLabel("January");
+//		dayLbl = new JLabel("Monday");
+//		dateLbl = new JLabel("1");
+//	}
+//	public void prepareUI() {
+//		//change the default layout (BorderLayout) to FlowLayout
+//		FlowLayout fl = new FlowLayout(FlowLayout.LEFT);
+//		this.setLayout(fl);
+//		//this.getContentPane().setLayout(fl); //prior to JDK1.5
+//		//add the componnents to the container (frame)
+//		this.add(monthBtn); //this.getContentPane().add(monthBtn);
+//		this.add(monthLbl); //this.getContentPane().add(monthLbl);
+//		this.add(dayBtn); // this.getContentPane().add(dayBtn);
+//		this.add(dayLbl); //this.getContentPane().add(dayLbl);
+//		this.add(dateBtn); //this.getContentPane().add(dateBtn);
+//		this.add(dateLbl); //this.getContentPane().add(dateLbl);
+//	}
+//}
